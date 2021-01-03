@@ -85,5 +85,6 @@ public class MainActivity extends AppCompatActivity {
         longitude.setText(String.format(" LONGITUDE:  %s", location.getLongitude()));
         altitude.setText(String.format(" ALTITUDE:  %s", location.getAltitude()));
         accuracy.setText(String.format(" ACCURACY:  %s", location.getAccuracy()));
+        String addressMessage = "No address found...    :(";
     }
 }
