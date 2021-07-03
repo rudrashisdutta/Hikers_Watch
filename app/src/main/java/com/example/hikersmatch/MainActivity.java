@@ -50,12 +50,7 @@ public class MainActivity extends AppCompatActivity {
         appHead.setText(R.string.appHead);
 
         locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
-        locationListener = new LocationListener() {
-            @Override
-            public void onLocationChanged(@NonNull Location location) {
-                updateLocationToUser(location);
-            }
-        };
+        locationListener = this::updateLocationToUser;
         permissionLocationCheckAndWork();
     }
     private void permissionLocationCheckAndWork(){
